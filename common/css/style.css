@@ -1,0 +1,49 @@
+body {
+    /*font-family: "Arial", 'Microsoft Jhenghei', "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-size: 14px;
+}
+img.pageHeaderImg{
+    margin-top: -15px;
+    padding: 0;
+    height: 50px;
+    width:auto;
+}
+
+.n-form-cell.for-page-header {
+    padding-top: 13px;
+    padding-bottom: 3px;
+    float:right;
+    margin-right: 12px;
+}
+.n-form.for-page-header-comp {
+    float:right;
+}
+div.n-form.for-page-header-comp>div.n-card.n-card-active > div > div.row > div.n-form-cell{
+    float: right;
+    width: 500px
+}
+.panel-primary-darken > .panel-heading {
+    /*background-color: #00722A;*/
+    background: -webkit-linear-gradient(#00722A, #5cb85c); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#00722A, #5cb85c); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#00722A, #5cb85c); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#00722A, #5cb85c); /* 标准的语法（必须放在最后） */
+    border-color: #245091;
+    font-weight: 400;
+    /*background: -moz-linear-gradient(left, #00722A, #5cb85c);*/
+    /*background: -webkit-gradient(linear, 0 0, 100% 100%, from(#00722A),to(#5cb85c));*/
+    /*background: -o-linear-gradient(30deg, #00722A, #5cb85c);*/
+    box-shadow:1.5px 1.5px 1px 1px #ed8c02;
+    color: #ffffff;
+}
+footer div.container {
+    text-align:center;
+    background-color: #f3f3f3;
+}
+div.index-container{
+    width: 80%;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: auto;
+    margin-left: auto;
+}

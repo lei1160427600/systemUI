@@ -1,0 +1,9 @@
+{
+  "LOGIN_URL": "http://210.13.77.75:15300/cas",
+  "MAINTENANCE_HOME_URL": "http://210.13.77.75:15300/maintenance",
+  "PA_SERVICE_URL": "http://210.13.77.75:15300/peakre/restlet/v1",
+  "PORTAL_HOME_URL": "http://210.13.77.75:15300/index.html",
+  "SCHEDULER_HOME_URL": "http://210.13.77.75:15300/sheduler",
+  "STATIC_HTML_CONTEXT": "11111111",
+  "SYS_SERVICE_URL": "http://localhost:8080/marksystem/rest/mark"
+}

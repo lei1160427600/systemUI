@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="../target/bootstrap3/css/bootswatch.paper.css">
+    <link rel="stylesheet" href="../target/bootstrap3/css/fileinput.css">
+    <link rel="stylesheet" href="../target/fontawesome/css/font-awesome.css">
+    <!-- component css -->
+    <link href="../target/select2/css/select2.css" rel="stylesheet">
+    <link href="../target/bootstrap3/css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <!--<link href="../src/css/parrot.css" rel="stylesheet">-->
+    <link href="../src/css/parrot.css" rel="stylesheet">
+    <link href="../target/parrot/css/nest-parrot.css" rel="stylesheet">
+    <link href="../common/css/style.css" rel="stylesheet">
+    <link rel="stylesheet"  href="../common/css/loginstyle.css">
+</head>
+<body>
+
+<div id="header">
+    <div class="header_title">
+        <span class="title_con">平时成绩管理系统系统</span>
+		<span id= "time" class= "title_right"></span>
+    </div>
+</div>
+
+<div id="content">
+    <center>
+        <div class="con">
+            <div class="con_title">
+                <span class="con_title_sp">欢迎登录平时成绩管理系统</span>
+            </div>
+            <div class="con_panel">
+                <div class="con_input">
+                    <span class="errorClass" id="userNameError"></span><br>
+                    <span>账&nbsp;&nbsp;&nbsp;&nbsp;号：</span><input type="text" class="inputClass" id="userName" placeholder="学号/工号" name="username"/>
+                </div>
+                <div class="con_input">
+                    <span class="errorClass" id="passwordError"></span><br>
+                    <span>密&nbsp;&nbsp;&nbsp;&nbsp;码：</span><input type="password" id="password" class="inputClass" placeholder="密码" name="pwd"/>
+                </div>
+                <div class="con_select">
+                    <input type="radio" checked name="t1" value="学生" />学生
+                    <input type="radio" name="t1" value="教师" />教师
+                    <input type="radio" name="t1" value="管理员" />管理员
+                </div>
+                <input type="submit" value="登    录" class="submit-btn"/>
+            </div>
+        </div>
+    </center>
+</div>
+<!-- foundation -->
+<!-- jquery -->
+<script src="../target/jquery/jquery.js"></script>
+<script src="../target/jquery/jquery.browser.js"></script>
+<script src="../target/jquery/jquery-deparam.js"></script>
+<script src="../target/jquery/qunit.js"></script>
+<script src="../target/jquery/jquery-storageapi.min.js"></script>
+<script src="../target/js-cookie/js-cookie.min.js"></script>
+<!-- bootstrap -->
+<script src="../target/bootstrap3/js/bootstrap.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../target/bootstrap3/js/ie10-viewport-bug-workaround.js"></script>
+<!-- momentjs -->
+<script src="../target/moment/moment-with-locales.js"></script>
+<!-- react -->
+<script src="../target/react/babel-browser.js"></script>
+<script src="../target/react/react-with-addons.js"></script>
+<script src="../target/react/react-dom.js"></script>
+<!-- jsface -->
+<!--<script src="../target/jsface/jsface.min.js"></script>-->
+<script src="../target/jsface/jsface.js"></script>
+<!--<script src="../target/jsface/jsface.pointcut.min.js"></script>-->
+
+<!-- components -->
+<script src="../target/select2/js/select2.js"></script>
+<script src="../target/bootstrap3/js/bootstrap-datetimepicker.js"></script>
+<script src="../target/jquery/jquery.mockjax.js"></script>
+<!-- react components -->
+<script src="../src/js/browser-patch.jsx" type="text/babel"></script>
+
+<script src="../target/parrot/js/nest-parrot.js" type="text/babel"></script>
+<script src="js/login/login.js"></script>
+</body>
+</html>
