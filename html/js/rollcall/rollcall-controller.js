@@ -2,9 +2,9 @@
  * Created by xue on 2017/5/1.
  */
 (function (context) {
-    var $page = $pt.getService(context,'$page');
-    class Controller extends $page.baseCotroller{
-        constructor(){
+    var $page = $pt.getService(context, '$page');
+    class Controller extends $page.baseCotroller {
+        constructor() {
             super()
         };
 
@@ -18,10 +18,10 @@
             return true;
         }
         initializeData() {
-            this.model = $pt.createModel($page.model,$page.validator.rollCallValidate());
+            this.model = $pt.createModel($page.model, $page.validator.rollCallValidate());
             this.search();
         }
-        
+
         /**
          *
          *
@@ -29,13 +29,22 @@
          */
         renderContent() {
             var layout = $pt.createFormLayout($page.layout.createFormLayout());
-            var form = <NForm model={this.model} layout={layout} view = {false}/>;
+            var form = < NForm model = {
+                this.model
+            }
+            layout = {
+                layout
+            }
+            view = {
+                false
+            }
+            />;
             this.form = ReactDOM.render(form, document.getElementById('main'));
             // this.model.setValidator($page.validator.indexValidate())
         }
-        create(){
+        create() {
             this.model.validate();
-            if(this.model.hasError() == true){
+            if (this.model.hasError() == true) {
                 NConfirm.getConfirmModal().show({
                     title: 'System Message',
                     disableClose: true,
@@ -47,16 +56,16 @@
                 // profession: $page.codes.Profession.getText(this.model.get("Profession")),
                 // userClass:$page.codes.ClassRoom.getText(this.model.get("ClassRome")),
                 profession: this.model.get("Profession"),
-                userClass:this.model.get("ClassRome"),
-                random:this.model.get("random"),
-                userCode:$pt.getUserCode()
+                userClass: this.model.get("ClassRome"),
+                random: this.model.get("random"),
+                userCode: $pt.getUserCode()
             }
-            var done = function (data,status){
-                $page.controller.model.set("creatRollCallTable",data);
+            var done = function (data, status) {
+                $page.controller.model.set("creatRollCallTable", data);
                 console.log("+++++++++++++++++")
                 console.log(data)
                 console.log("+++++++++++++++++")
-               }
+            }
             var fail = function (XMLHttpRequest, textStatus, errorThrown) {
                 alert(XMLHttpRequest.status);
                 alert(XMLHttpRequest.readyState);
@@ -68,7 +77,7 @@
                 done: done,
                 fail: fail
             });
-            
+
         }
 
         /**
@@ -77,12 +86,12 @@
          * @param {*} needAlert
          * @memberof Controller
          */
-        saveRollCallT(needAlert){
+        saveRollCallT(needAlert) {
             var isSaved = false;
             var sendModel = this.model.get("creatRollCallTable");
-            var done = function (data,status){
-                $page.controller.model.set("creatRollCallTable",data);
-                isSaved=true;
+            var done = function (data, status) {
+                $page.controller.model.set("creatRollCallTable", data);
+                isSaved = true;
             }
             var fail = function (XMLHttpRequest, textStatus, errorThrown) {
                 alert(XMLHttpRequest.status);
@@ -105,19 +114,19 @@
                 }
             }
         }
-        reset(){
-            this.model.set("condition",null);
+        reset() {
+            this.model.set("condition", null);
             this.form.forceUpdate()
         }
-        search(){
+        search() {
             var sendModel = {
                 profession: this.model.get("condition_profession"),
-                userClass:this.model.get("condition_userClass"),
-                addDate:this.model.get("condition_addDate"),
-                tCode:$pt.getUserCode()
+                userClass: this.model.get("condition_userClass"),
+                addDate: this.model.get("condition_addDate"),
+                tCode: $pt.getUserCode()
             };
-            var done = function (data,status){
-                $page.controller.model.set("historyTable",data);
+            var done = function (data, status) {
+                $page.controller.model.set("historyTable", data);
             }
             var fail = function (XMLHttpRequest, textStatus, errorThrown) {
                 alert(XMLHttpRequest.status);
