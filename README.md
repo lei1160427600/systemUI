@@ -9,3 +9,6 @@ start nginx
 2 启动http-server
 
 http-server -a localhost -p 8080
+
+编辑器
+VS Code (插件：git history,vscode-icons)
