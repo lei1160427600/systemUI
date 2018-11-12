@@ -1,0 +1,10 @@
+/.settings/
+/.project
+/.idea/
+/temp-test/
+/bower_components
+/node_modules
+/src/fonts
+
+/.sublime-grunt.cache
+/npm-debug.log
