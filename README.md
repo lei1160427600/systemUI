@@ -48,7 +48,7 @@ git commit -m "commit info"
 git pull
 
 git diff  #用于显示提交和工作树等之间的更改。此命令比较的是工作目录中当前文件和暂存区域快照之间的差异，也就是修改之后还没有暂存起来的变化内容。
-git diff  # 不加参数即默认比较共组区和暂存区
+git diff  # 不加参数即默认比较工作区和暂存区
 git diff <file>  #比较当前文件和暂存区文件差异
 git diff <id1><id2>  # 比较两次提交之间的差异
 git diff <branch1><branch2>  # 两个分支之间的比较
