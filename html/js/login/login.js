@@ -3,9 +3,9 @@
  */
 (function(context){
     (function (window) {
-        document.getElementById('time').innerHTML=moment(new Date()).format("MM/DD/YYYY h:mm:ss A");
+        document.getElementById('time').val=moment(new Date()).format("MM/DD/YYYY h:mm:ss A");
         function getTime(){
-            return "document.getElementById('time').innerHTML=moment(new Date()).format('MM/DD/YYYY h:mm:ss A')";
+            return "document.getElementById('time').val=moment(new Date()).format('MM/DD/YYYY h:mm:ss A')";
         }
         setInterval(getTime(),1000);
     }(window));
